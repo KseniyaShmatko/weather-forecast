@@ -1,0 +1,822 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    --maxWidth: 1320px;
+    height: 1132px;
+    padding: 2% 0% 1% 5%;
+    background-color: #f0f1f5;
+}
+
+header {
+    width: 90svw;
+    height: 82px;
+    max-width: var(--maxWidth);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 2% 0% 2%;
+}
+
+main {
+    width: 90svw;
+    height: 872px;
+    max-width: var(--maxWidth);
+    margin: 3% 0% 3% 0%;
+
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+footer {
+    width: 90svw;
+    height: 80px;
+    max-width: var(--maxWidth);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: black solid 1px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+}
+
+/*Header - name block*/
+.citeName { 
+    font-family: "Agbalumo", cursive;
+    font-size: 36px;
+}
+
+.citeName span {
+    color: #ffb703;
+}
+
+/*Header - search input group*/
+.inputGroup{
+    width: 44svw;
+    max-width: 670px;
+    height: 50px;
+}
+
+input[type="text"] {
+    position: relative;
+    left: 10%;
+    width: 90%;
+    height: 50px;
+    padding-left: 2%;
+    padding-right: 5%;
+
+    font-family: sans-serif;
+    font-size: 20px;
+
+    color: black;
+    border: 2px solid #ffb703;
+    border-radius: 10px;
+    background-color: white;
+}
+
+button {
+    width: 34px;
+    height: 34px;
+    position: relative;
+    left: 1%;
+    bottom: 7px;
+
+    border-radius: 20%;
+    background: transparent url('../img/icons/icon.png') no-repeat center center;
+    background-size: 24px;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0px 0px 1px 3px rgba(255, 183, 3, 1);
+    transition-duration: .1s;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    margin-top: -14px;
+    width: 24px;
+    height: 24px;
+    
+    color: #ffb703;
+    border: 2px solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+button.sending{
+    pointer-events: none;
+    cursor: not-allowed;
+}
+    
+button.sending::before {
+    animation: .8s linear infinite rotate;
+    transition-delay: 0.5s;
+    transition-duration: 1s;
+    opacity: 1;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Main - Weather today block*/
+.todayWeather {
+    width: 96%;
+    height: 275px;
+    margin: 1% 2% 2% 2%;
+
+    border-radius: 2em;
+    background:  no-repeat fixed top center;
+}
+
+.todayReport {
+    max-width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.weatherTodayDescription {
+    max-width: 15%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: start;
+    margin-left: 5%;
+
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+}
+
+.weatherTodayDescription p {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.mainImg {
+    max-width: 44px;
+    max-height: 44px;
+}
+
+.weatherTodayDescription p{
+    font-size: 0.6em;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.todayReport h3 {
+    margin-right: 5%;
+
+    font-size: 1.8em;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/*Weather today - weather hourly block*/
+.hourReport {
+    max-width: 100%;
+    height: 40%;
+    display: flex;
+}
+
+.hourSwiper {
+    width: 90%;
+    height: 100%;
+}
+
+.hourReport div[class^="swiper-button-"] {
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+
+    background-size: cover;
+}
+
+.hourReport div[class^="swiper-button-"]:not(.swiper-button-disabled) {
+    cursor: pointer;
+}
+
+.hourReport .swiper-button-disabled {
+    filter: brightness(70%);
+    cursor: default;
+}
+
+.swiper-button-prevHour {
+    background: url('../img/icons/prev_white.png') no-repeat center;
+}
+
+.swiper-button-nextHour {
+    background: url('../img/icons/next_white.png') no-repeat center;
+
+}
+
+.weatherHourly section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    color: white; 
+}
+
+.swiper-slide .hour{
+    margin: 5%;
+}
+
+.swiper-slide .hourImg{ 
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.weatherHourly .swiper-slide .temp{
+    margin: 5%;
+} 
+
+/*Main - next days weather block*/
+.nextDaysReport {
+    width: 96%;
+    height: 182px;
+    margin: 4% 2% 4% 2%;
+    display: flex;
+    align-items: center;
+
+    border-radius: 2em;
+    background-color: white;
+}
+
+.daySwiper {
+    width: 90%;
+    height: 100%;
+}
+
+.nextDaysReport div[class^="swiper-button-"] {
+    width: 60px;
+    height: 60px;
+
+    background-size: cover;
+}
+
+.nextDaysReport div[class^="swiper-button-"]:not(.swiper-button-disabled) {
+    cursor: pointer;
+}
+
+.nextDaysReport .swiper-button-disabled {
+    filter: brightness(70%);
+    cursor: default;   
+}
+
+.swiper-button-prevDay {
+    background: url('../img/icons/prev_yellow.png') no-repeat center;
+}
+
+.swiper-button-nextDay {
+    background: url('../img/icons/next_yellow.png') no-repeat center;
+}
+
+.weatherDaily section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    color: black; 
+}
+
+.swiper-slide .day{
+    font-size: 1.5em;
+}
+
+.swiper-slide .dayImg{ 
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.weatherDaily .swiper-slide .temp{
+    font-size: 1.4em;
+}
+
+/*Main - all other qualities block*/
+.wrapperPropesties {
+    width: 96%;
+    height: 318px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 3% 2% 2% 2%;
+
+    background-color: inherit;
+}
+
+/* Blocks in wrapperPropesties */
+.wind, 
+.humidity,
+.pressure,
+.cloudiness {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr;
+
+    background-color: white;
+}
+
+.wind {
+    border-top-left-radius: 2em;
+}
+
+.humidity {
+    border-top-right-radius: 2em;
+}
+
+.pressure {
+    border-bottom-left-radius: 2em;
+}
+
+.cloudiness {
+    border-bottom-right-radius: 2em;
+}
+
+.minMaxTemp,
+.sunTime {
+    width: 95%;
+    height: 100%;
+    margin: 0% 0% 0% 5%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+
+    border-radius: 2em;
+    background-color:white;
+}   
+
+.wrapperPropesties section img{ 
+    max-width: 55px;
+    max-height: 55px;
+}
+
+.wrapperPropesties section p{
+    font-size: 1.4em;
+    padding: 7px;
+}
+
+.minTemp,
+.maxTemp {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.maxTemp {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.maxTemp p{
+    margin-left: 5%;
+}
+
+.minMaxTemp div img,
+.sunTime div img  {
+    max-width: 55px;
+    max-height: 55px;
+}
+
+.minMaxTemp div p,
+.sunTime div {
+    padding: 0px;
+}
+
+.sunrise,
+.sunset  {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.sunset  {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+/*Footer */
+a:link,
+a:visited  {
+    color: #ffb703;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color:  #ffb703;
+    text-decoration: underline;
+}
+
+footer p {
+    padding: 10px;
+}
+
+/* Media */
+
+@media (hover: hover) {
+    button:hover {
+        box-shadow: 0px 0px 1px 3px rgba(255, 183, 3, 0.3);
+        transition-duration: .1s;
+    }
+    button:active {
+        box-shadow: 0px 0px 1px 3px rgba(255, 183, 3, 1);
+        transition-duration: .1s;
+    }     
+}
+
+@media screen and (width > 1460px){
+    html, body {
+        height: 100%;
+    }
+    html {
+        display: table;
+        margin: auto;
+    }
+    body {
+        display: table-cell;
+        vertical-align: start;
+        padding: 2% 0% 1% 0%;
+    }    
+    button {
+        left: 2%;
+    }
+}
+
+@media screen and (max-width: 1090px){
+    button {
+        left: -1%;
+    }
+    .wrapperPropesties section p{
+        padding: 5px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    button {
+        left: -2%;
+    }
+    .wrapperPropesties {
+        height: 350px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .minMaxTemp,
+    .sunTime {
+        width: 100%;
+        grid-row-start: 3;
+        margin: 0;
+    }  
+}
+
+@media screen and (max-width: 870px){
+    body {
+        height: 1160px;
+    }
+    header {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 140px;
+    }
+    .inputGroup{
+        width: 80svw;
+    }
+    input[type="text"] {
+        position: relative;
+        left: 5%;
+    }
+    button {
+        left: -3%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .swiper-slide .day{
+        font-size: 1.4em;
+    }
+    .swiper-slide .dayImg{ 
+        max-width: 55px;
+        max-height: 55px;
+    }
+    .weatherDaily .swiper-slide .temp{
+        font-size: 1.3em;
+    }
+    .wrapperPropesties section img{ 
+        max-width: 48px;
+        max-height: 48px;
+    }
+    .wrapperPropesties section p{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 740px){
+    body {
+        height: 1200px;
+    }
+    button {
+        left: -5%;
+    }
+    main {
+        height: 910px;
+    }
+    .wrapperPropesties {
+        height: 390px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .minMaxTemp {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }  
+    .sunTime {
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media screen and (max-width: 630px){
+    button {
+        left: -6%;
+    }
+}
+
+
+@media screen and (max-width: 530px){
+    button {
+        left: -7%;
+    }   
+    .main {
+        height: 920px;
+    }
+    .todayWeather {
+        height: 255px;
+    }
+    .nextDaysReport {
+        height: 172px;
+    }
+    .weatherTodayDescription {
+        font-size: 1.7em;
+    }    
+    .todayReport h3 {
+        font-size: 1.5em;
+    }
+    .nextDaysReport div[class^="swiper-button-"] {
+        width: 55px;
+        height: 55px;
+    }
+    .swiper-slide .day{
+        font-size: 1.2em;
+    }
+    .swiper-slide .dayImg{ 
+        max-width: 50px;
+        max-height: 50px;
+    }  
+    .weatherDaily .swiper-slide .temp{
+        font-size: 1.1em;
+    }
+    .wrapperPropesties {
+        height: 440px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .wind {
+        grid-row-start: 1;
+        border-top-right-radius: 2em;
+    }
+    .humidity {
+        grid-row-start: 2;
+        border-top-right-radius: 0em;
+    }
+    .pressure {
+        grid-row-start: 3;
+        border-bottom-left-radius: 0em;
+    }
+    .cloudiness {
+        grid-row-start: 4;
+        border-bottom-right-radius: 0em;
+    }
+    .minMaxTemp {
+        grid-row-start: 5;
+        grid-column-end: 1;
+        border-radius: 0em;
+    }  
+    .sunTime {
+        grid-row-start: 6;
+        grid-column-end: 1;
+        border-top-left-radius: 0em;
+        border-top-right-radius: 0em;
+    } 
+}
+
+@media screen and (max-width: 480px){
+    body {
+        height: 1160px;
+    } 
+    .inputGroup{
+        width: 90svw;
+    }
+    button {
+        width: 30px;
+        height: 30px;
+        background-size: 20px;
+    }
+    button::before {
+        width: 20px;
+        height: 20px;
+        right: 32px;
+        margin-top: -12px;
+    }
+    .todayWeather {
+        height: 250px;
+    }
+    .weatherTodayDescription h2 {
+        font-size: 1.3em;   
+    }    
+    .todayReport h3 {
+        font-size: 1.4em;
+    }
+    .nextDaysReport {
+        height: 160px;
+    }
+    .swiper-slide .day{
+        font-size: 1.3em;
+    }
+    .swiper-slide .dayImg{ 
+        max-width: 44px;
+        max-height: 44px;
+    }  
+    .weatherDaily .swiper-slide .temp{
+        font-size: 1em;
+    }
+    .wrapperPropesties {
+        height: 460px;
+    }
+    .wrapperPropesties section p {
+        font-size: 1em;
+    }
+    .wrapperPropesties section img{ 
+        max-width: 44px;
+        max-height: 44px;
+    }   
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .inputGroup{
+        width: 90svw;
+    }
+    input[type="text"] {
+        width: 85%;
+        left: 7%;
+    }
+    button {
+        width: 34px;
+        height: 34px;
+        background-size: 20px;
+    }
+    button::before {
+        width: 20px;
+        height: 20px;
+        right: 32px;
+        margin-top: -12px;
+    }
+}
+
+@media screen and (max-width: 339px){
+    body {
+        padding: 2% 0% 1% 2%;
+    }
+    .citeName { 
+        font-size: 28px;
+    }   
+    input[type="text"] {
+        height: 45px;
+        font-size: 16px;
+    }
+    button {
+        bottom: 5px;
+        left: -8.5%;
+    }
+    button::before {
+        width: 20px;
+        height: 20px;
+        right: 32px;
+        margin-top: -12px;
+    }   
+    .todayWeather {
+        height: 240px;
+    }
+    .weatherTodayDescription h2 {
+        font-size: 1.1em;   
+    }    
+    .todayReport h3 {
+        font-size: 1.2em;
+    }
+    .hourReport div[class^="swiper-button-"] {
+        width: 44px;
+        height: 44px;
+    }
+    .nextDaysReport div[class^="swiper-button-"] {
+        width: 40px;
+        height: 40px;
+    }
+    .nextDaysReport {
+        height: 160px;
+    }
+    .swiper-slide .day{
+        font-size: 1.1em;
+    }
+    .weatherDaily .swiper-slide .temp{
+        font-size: 0.8em;
+    }
+    .wrapperPropesties {
+        height: 470px;
+    }
+    .wrapperPropesties section p {
+        font-size: 0.8em;
+    }
+    .wrapperPropesties section img{ 
+        max-width: 36px;
+        max-height: 36px;
+    }   
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .inputGroup{
+        width: 85svw;
+    }
+    input[type="text"] {
+        width: 85%;
+    }
+    button {
+        width: 24px;
+        height: 24px;
+        left: -9%;
+    }
+    button::before {
+        width: 16px;
+        height: 16px;
+        margin-top: -10px;
+    }   
+    .mainImg {
+        max-width: 40px;
+        max-height: 40px;
+    }
+    .nextDaysReport {
+        height: 150px;
+    }
+    .weatherDaily .swiper-slide .temp{
+        font-size: 0.8em;
+    }
+    .wrapperPropesties {
+        height: 480px;
+    }
+    .wrapperPropesties section p {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 230px){
+    button {
+        width: 10%;
+    }
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather Cuties. Weather forecast</title>       	
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Weather forecast with cute icons.">
+        <meta name="keywords" content="Weather, Forecast, Cuties">
+        <meta name="author" content="Kseniya Shmatko">
+        <meta name="yandex-verification" content="e8f3cbcae66da4ed" />
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://weathercuties.ru/"> 
+        <meta property="og:title" content="Weather Cuties. Weather forecast">
+        <meta property="og:description" content="Weather forecast with cute icons. Find out the weather anywhere in the world.">
+        <meta property="og:image" content="https://weathercuties.ru/img/icons/rain.png">
+        <link href="views/style.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="img/icons/iconRain.png" type="image/x-icon">
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+            ym(96700071, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true
+            });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/96700071" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+    </head>
+    <body>
+        <header>
+            <h1 class="citeName">Weather <span>Cuties</span></h1>
+            <div class="inputGroup">
+                <input type="text" name="region" maxlength="30" required="required" placeholder="Enter location" autocomplete="address-level2">
+                <button type="submit"></button>
+            </div>
+        </header>
+        <main>
+            <article class="todayWeather" aria-label="article">
+                <article class="todayReport" aria-label="article">
+                    <div class="weatherTodayDescription">
+                        <h2></h2>
+                        <img class="mainImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                        <p></p>
+                    </div>
+                    <h3>Moscow</h3>
+                </article>
+                <article class="hourReport" aria-label="article">
+                    <div class="swiper-button-prevHour"></div>
+                    <div class="swiper hourSwiper">
+                        <div class="weatherHourly swiper-wrapper">
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                            <section class="swiper-slide">
+                                <p class="hour"></p>
+                                <img class="hourImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                                <p class="temp"></p>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="swiper-button-nextHour"></div>
+                </article>
+            </article>
+            <article class="nextDaysReport" aria-label="article">
+                <div class="swiper-button-prevDay"></div>
+                <div class="swiper daySwiper">
+                    <div class="weatherDaily swiper-wrapper">
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                        <section class="swiper-slide">
+                            <p class="day"></p>
+                            <img class="dayImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+                            <p class="temp"><span class="min"></span> <span class="max"></span></p>
+                        </section>
+                    </div>
+                </div>
+                <div class="swiper-button-nextDay"></div>
+            </article>
+            <article class="wrapperPropesties" aria-label="article">
+                <section class="wind">
+                    <img class="windImg" src="img/icons/wind.png" alt="wind">
+                    <p>Wind speed <span></span> m/s</p>
+                </section>
+                <section class="humidity">
+                    <img class="waterImg" src="img/icons/drop.png" alt="drops">
+                    <p>Humidity <span></span>%</p>
+                </section>
+                <section class="minMaxTemp">
+                    <div class="minTemp">
+                        <img class="minImg" src="img/icons/min.png" alt="minimum temperature">
+                        <p>from <span></span></p>
+                    </div>
+                    <div class="maxTemp">
+                        <p>to <span></span></p>
+                        <img class="maxImg" src="img/icons/max.png" alt="maximum temperature">
+                    </div>
+                </section>
+                <section class="pressure">
+                    <img class="barometerImg" loading="lazy" src="img/icons/barometer.png" alt="barometer">
+                    <p>Pressure <span></span> mmHg</p>
+                </section>
+                <section class="cloudiness">
+                    <img class="cloudyImg" loading="lazy" src="img/icons/few_clouds.png" alt="cloudiness">
+                    <p>Cloudiness <span></span>%</p>
+                </section>
+                <section class="sunTime">
+                    <div class="sunrise">
+                        <img class="sunriseImg" loading="lazy" src="img/icons/clear_sky.png" alt="sunrise">
+                        <p>dawn <br><span></span></p>
+                    </div>
+                    <div class="sunset">
+                        <p>dusk <br><span></span></p>
+                        <img class="sunsetImg" loading="lazy" src="img/icons/moon.png" alt="sunset">
+                    </div>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <p>The weather forecast is calculated using <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></p>
+            <p>Inspired by <a href="https://www.behance.net/gallery/177697389/Weather-App-Dashboard-Design?tracking_source=search_projects" target="_blank">Eleyas Hasan</a>'s design</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="module" src="views/swiper.js"></script>
+        <script type="module" src="services/search.js"></script>
+        <script type="module" src="services/processResult.js"></script>
+        <script type="module" src="services/imgSrc.js"></script>
+        <script type="module" src="services/domElements.js"></script>
+    </body>
+</html>
